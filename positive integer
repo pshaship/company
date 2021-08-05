@@ -1,12 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
  
-// Function to count factors in O(N)
+
 int numberOfDivisors(int num)
 {
     int c = 0;
  
-    // iterate and check if factor or not
+ 
     for (int i = 1; i <= num; i++) {
         if (num % i == 0) {
             c += 1;
@@ -15,13 +15,12 @@ int numberOfDivisors(int num)
     return c;
 }
  
-// Function to count numbers having
-// exactly 9 divisors
+
 int countNumbers(int n)
 {
     int c = 0;
  
-    // check for all numbers <=N
+  
     for (int i = 1; i <= n; i++) {
         // check if exactly 9 factors or not
         if (numberOfDivisors(i) == 9)
@@ -30,10 +29,10 @@ int countNumbers(int n)
     return c;
 }
  
-// Driver Code
+
 int main()
 {
-    int n = 1000;
+    int n = 100;
  
     cout << countNumbers(n);
  
